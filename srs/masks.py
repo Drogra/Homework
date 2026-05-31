@@ -27,7 +27,7 @@ def get_mask_account(account_number: Any) -> str:
 
     # Проверяем, что длина номера достаточна для маскирования
     if len(account_number_str) < 4:
-        raise ValueError("Номер карты должен содержать минимум 4 цифр")
+        raise ValueError("Номер счета должен содержать минимум 4 цифр")
 
     # Выделяем видимые части: последние 4 цифры
     visible_end = account_number_str[-4:]
