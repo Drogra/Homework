@@ -5,6 +5,8 @@ from srs.masks import get_mask_card_number, get_mask_account
 def test_get_mask_card_number1():
     assert get_mask_card_number('7000792289606361') == "7000 79** **** 6361"
     assert get_mask_card_number('7000 7922 8960 6361') == "7000 79** **** 6361"
+    assert get_mask_card_number('1596837868705199') == "1596 83** **** 5199"
+    assert get_mask_card_number('1596 8378 6870 5199') == "1596 83** **** 5199"
 
 def test_get_mask_card_number2():
     with pytest.raises(ValueError) as exc_info:

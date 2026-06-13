@@ -39,5 +39,3 @@ def get_mask_account(account_number: str) -> str:
 
     return result
 
-
-print(get_mask_card_number('7000792289606361'))
