@@ -36,3 +36,8 @@ exclude = 'venv'
 
 [tool.isort]
 py_version = 314
+[[tool.poetry.source]]
+name = "fpho"
+url = "https://files.pythonhosted.org"
+priority = "primary"
+
