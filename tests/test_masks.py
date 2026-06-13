@@ -31,3 +31,4 @@ def test_get_mask_account2():
         get_mask_account('7365410843013587430521')
 
     assert str(exc_info.value) == "Номер счета должен содержать 20 цифр"
+
