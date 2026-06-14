@@ -1,6 +1,6 @@
 import pytest
-
 from srs.proccessing import filter_by_state, sort_by_date
+
 from tests.conftest import listing, listing_sort
 
 
