@@ -9,13 +9,18 @@ def test_get_mask_card_number1():
     assert get_mask_card_number("1596837868705199") == "1596 83** **** 5199"
     assert get_mask_card_number("1596 8378 6870 5199") == "1596 83** **** 5199"
 
-@pytest.mark.parametrize('card_number, expected_result', [
-    ('7000792289606361','7000 79** **** 6361'),
-    ('1596837868705199','1596 83** **** 5199'),
-    ('7158300734726758','7158 30** **** 6758')
-])
+
+@pytest.mark.parametrize(
+    "card_number, expected_result",
+    [
+        ("7000792289606361", "7000 79** **** 6361"),
+        ("1596837868705199", "1596 83** **** 5199"),
+        ("7158300734726758", "7158 30** **** 6758"),
+    ],
+)
 def test_get_mask_card_number2(card_number, expected_result):
     assert get_mask_card_number(card_number) == expected_result
+
 
 def test_get_mask_card_number3():
     with pytest.raises(ValueError) as exc_info:
