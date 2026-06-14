@@ -6,7 +6,7 @@ def get_mask_card_number(card_number: str) -> str:
     # Преобразуем номер в строку для удобной работы с символами
     card_str = str(card_number)
     # В случае наличия пробелов убираем их
-    cleaned_card_str = card_str.replace(' ', '')
+    cleaned_card_str = card_str.replace(" ", "")
     # Проверяем, что длина номера достаточна для маскирования
     if len(cleaned_card_str) != 16:
         raise ValueError("Номер карты должен содержать 16 цифр")
@@ -25,7 +25,7 @@ def get_mask_account(account_number: str) -> str:
     """Маскировка цифр номера счета"""
     # Преобразуем номер в строку для удобной работы с символами
     account_number_str = str(account_number)
-    cleaned_account_number_str = account_number_str.replace(' ', '')
+    cleaned_account_number_str = account_number_str.replace(" ", "")
 
     # Проверяем, что длина номера достаточна для маскирования
     if len(cleaned_account_number_str) != 20:
@@ -38,4 +38,3 @@ def get_mask_account(account_number: str) -> str:
     result = f"**{visible_end}"
 
     return result
-
